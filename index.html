@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap" rel="stylesheet">
+    <title>landing page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <nav>
+                <div class="logo">
+                    <img src="./img/logo.png" alt="logoImg">
+                    <h1>Randhir</h1>
+                </div>
+                <ul class="nav-icons">
+                    <a href="/">Home</a>
+                    <a href="/">About</a>
+                    <a href="/">service</a>
+                    <a href="/">contact</a>
+                </ul>
+                <ul class="social">
+                    <img src="./img/face.png" alt="">
+                    <img src="./img/insta.png" alt="">
+                    <img src="./img/twitter.png" alt="">
+                </ul>
+            </nav>
+
+            <div class="left-inner">
+                <h1>Grab <span>Your</span> Deals Now !</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus adipisci unde voluptatibus ipsa deserunt soluta doloribus nesciunt veritatis! Placeat harum laborum, sed dicta necessitatibus ullam similique dolorum esse dignissimos eos!</p>
+                <button>shop now</button>
+                <img src="./img/discount.png" alt="">
+            </div>
+            <div class="discount-tags">
+          </div>
+        </div>
+        <div class="right">
+             <div class="product-image" >
+                 <img src="./img/speaker3.png" id="img-container" >
+                 <h3 id="img-text">speaker1</h3>
+                 <p >Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                 <p id="img-rating"></p>
+             </div>
+             <div class="images-icons">
+                <img src="./img/speaker1.png" onclick={changeImage(1)} alt="">
+                <img src="./img/speaker2.png" onclick={changeImage(2)} alt="">
+                <img src="./img/speaker3.png" onclick={changeImage(3)} alt="">
+             </div>
+            
+        </div>
+        <div class="bottom">
+         
+            <img src="./img/b1.jpg" alt="">
+            <img src="./img/b2.jpg" alt="">
+            <img src="./img/b3.jpg" alt="">
+            <img src="./img/b4.jpg" alt="">
+            <img src="./img/b5.jpg" alt="">
+           
+        </div>
+    </div>
+
+    <script>
+     const imageContainer=document.getElementById('img-container')
+     const imageText=document.getElementById('img-text')
+     const imagerating=document.getElementById('img-rating')
+     const changeImage=(i)=>{
+        imageContainer.setAttribute('src',`./img/speaker${i}.png`)
+        imageText.innerHTML=`speaker${i}`
+        // imagerating.innerHTML=new Array(5).fill('✭').replace(','," ")
+        // imageContainer.setAttribute('alt')=`./img/speaker${i}.png`
+     }
+     console.log(imageText.innerHTML)
+
+    </script>
+</body>
+</html>
